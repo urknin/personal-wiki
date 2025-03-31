@@ -30,18 +30,20 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    h1,
-    h2 {
+    h1, h2 {
       color: #1c1e21;
     }
 
-    h2 {
+    .about-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       border-bottom: 2px solid #1877f2;
       padding-bottom: 5px;
+      margin-bottom: 10px;
     }
 
-    p,
-    li {
+    p, li {
       color: #4b4f56;
       font-size: 16px;
       line-height: 1.6;
@@ -51,27 +53,83 @@
       list-style-type: disc;
       margin-left: 20px;
     }
+
+    .contact-btn {
+      background-color: transparent;
+      border: 2px solid #1877f2;
+      color: #1877f2;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-family: 'Georgia', serif;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      border: 2px solid #1877f2;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .popup-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .popup-close {
+      background: none;
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #1877f2;
+    }
   </style>
 </head>
-
 <body>
   <div class="navbar">Siddart Krishnaraju | Personal Wiki</div>
   <div class="container">
-    <h2>Contact Information</h2>
-    <p><strong>Name:</strong> Siddart Krishnaraju</p>
-    <p><strong>Location:</strong> Austin, TX</p>
-    <p><strong>Email:</strong> <a href="mailto:rk.siddart@gmail.com">rk.siddart@gmail.com</a></p>
-    <p><strong>Phone:</strong> (984) 292-9277</p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sid-k-54b508ba/"
-        target="_blank">linkedin.com/in/sid/</a></p>
 
-    <h2>About Me</h2>
+    <div class="about-header">
+      <h2 style="margin: 0;">About Me</h2>
+      <button class="contact-btn" onclick="togglePopup()">Contact</button>
+    </div>
+
     <p>I’m Siddart Krishnaraju, a passionate full-stack developer and API specialist with a strong foundation in Spring
       Boot and AWS. My professional journey spans software development, data analytics, and cloud solutions. Outside of
       work, I enjoy exploring tech innovations, optimizing systems, and building smart investment strategies. I bring a
       blend of engineering precision and creative problem-solving to every challenge I take on.</p>
 
-    <h2>Professional Summary</h2>
+    <div id="contactPopup" class="popup">
+      <div class="popup-header">
+        <h3 style="margin: 0;">Contact Information</h3>
+        <button class="popup-close" onclick="togglePopup()">&times;</button>
+      </div>
+      <p><strong>Name:</strong> Siddart Krishnaraju</p>
+      <p><strong>Location:</strong> Austin, TX</p>
+      <p><strong>Email:</strong> <a href="mailto:rk.siddart@gmail.com">rk.siddart@gmail.com</a></p>
+      <p><strong>Phone:</strong> (984) 292-9277</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sid-k-54b508ba/" target="_blank">linkedin.com/in/sid/</a></p>
+    </div>
+
+    <!-- Existing sections like Professional Summary, Certifications, Technical Skills, Experience, Projects, Education stay unchanged -->
+
+  
+
+  <h2>Professional Summary</h2>
     <ul>
       <li>5+ years of experience in Java/J2EE applications across Insurance, Retail, and Banking domains.</li>
       <li>Proficient in Spring Framework, RESTful APIs, microservices, and UI technologies including Angular and React.
@@ -178,5 +236,11 @@
       </li>
     </ul>
   </div>
+  <script>
+    function togglePopup() {
+      const popup = document.getElementById("contactPopup");
+      popup.style.display = popup.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
 </html>
