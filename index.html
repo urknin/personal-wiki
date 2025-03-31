@@ -1,110 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siddart Krishnaraju | Personal Wiki</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #e9ebee;
-    }
-
-    .navbar {
-      background-color: #1877f2;
-      color: white;
-      padding: 15px 30px;
-      font-size: 24px;
-      font-weight: bold;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 10px auto;
-      background: white;
-      padding: 10px 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1, h2 {
-      color: #1c1e21;
-    }
-
-    .about-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #1877f2;
-      padding-bottom: 5px;
-      margin-bottom: 10px;
-    }
-
-    p, li {
-      color: #4b4f56;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    ul {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-
-    .contact-btn {
-      background-color: transparent;
-      border: 2px solid #1877f2;
-      color: #1877f2;
-      font-weight: bold;
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-family: 'Georgia', serif;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      padding: 20px;
-      border: 2px solid #1877f2;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      z-index: 9999;
-      width: 90%;
-      max-width: 400px;
-    }
-
-    .popup-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .popup-close {
-      background: none;
-      border: none;
-      font-size: 20px;
-      font-weight: bold;
-      cursor: pointer;
-      color: #1877f2;
-    }
-  </style>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddart Krishnaraju | Personal Wiki</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #e9ebee;
+      }
+  
+      .navbar {
+        background-color: #1877f2;
+        color: white;
+        padding: 15px 30px;
+        font-size: 24px;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+  
+      .container {
+        max-width: 1000px;
+        margin: 10px auto;
+        background: white;
+        padding: 10px 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+  
+      h1, h2 {
+        color: #1c1e21;
+        border-bottom: 2px solid #1877f2;
+        padding-bottom: 5px;
+      }
+  
+      .about-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #1877f2;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+      }
+  
+      p, li {
+        color: #4b4f56;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+  
+      ul {
+        list-style-type: disc;
+        margin-left: 20px;
+      }
+  
+      .contact-btn {
+        background-color: transparent;
+        border: 2px solid #1877f2;
+        color: #1877f2;
+        font-weight: bold;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-family: 'Georgia', serif;
+        font-size: 16px;
+        cursor: pointer;
+      }
+  
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 2px solid #1877f2;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        width: 90%;
+        max-width: 400px;
+      }
+  
+      .popup-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+  
+      .popup-close {
+        background: none;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        color: #1877f2;
+      }
+    </style>
+  </head>
 <body>
   <div class="navbar">Siddart Krishnaraju | Personal Wiki</div>
   <div class="container">
 
     <div class="about-header">
-      <h2 style="margin: 0;">About Me</h2>
+      <h2 style="margin: 0; border-bottom: none">About Me</h2>
       <button class="contact-btn" onclick="togglePopup()">Contact</button>
     </div>
 
@@ -130,6 +132,7 @@
   
 
   <h2>Professional Summary</h2>
+  
     <ul>
       <li>5+ years of experience in Java/J2EE applications across Insurance, Retail, and Banking domains.</li>
       <li>Proficient in Spring Framework, RESTful APIs, microservices, and UI technologies including Angular and React.
