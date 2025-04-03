@@ -34,6 +34,9 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
+  
+  
+
     h1,
     h2 {
       color: #f0f3ff;
@@ -66,6 +69,10 @@
       border-radius: 6px;
       font-size: 16px;
       cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .popup {
@@ -108,7 +115,10 @@
 
 <body>
   <div class="navbar">Siddart Krishnaraju | Austin, TX
-    <button class="contact-btn" onclick="togglePopup()">Contact</button>
+    <div style="display: flex; justify-content: flex-end; gap: 10px; margin: 10px 30px 0 30px;">
+      <button class="contact-btn" onclick="togglePopup()">Contact</button>
+      <a href="resume.pdf" download class="contact-btn">Download Resume</a>
+    </div>
   </div>
   <div>
 
